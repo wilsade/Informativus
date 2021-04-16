@@ -25,6 +25,11 @@ namespace Informativus.ExemploPlugIns
     public string OptionalCaptionLine2 => "mensagem";
 
     /// <summary>
+    /// ToolTip que será exibido ao posicionar o Mouse sobre o botão
+    /// </summary>
+    public string ToolTip => "Pequena descrição";
+
+    /// <summary>
     /// Imagem que será exibida no menu
     /// </summary>
     public Image ButtonImage => SystemIcons.Information.ToBitmap();
