@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GDicDataSet" targetNamespace="http://tempuri.org/GDicDataSet.xsd" xmlns:mstns="http://tempuri.org/GDicDataSet.xsd" xmlns="http://tempuri.org/GDicDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GDicDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="GDicDataSet" msprop:Generator_UserDSName="GDicDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GDic" msprop:Generator_UserTableName="GDic" msprop:Generator_RowEvArgName="GDicRowChangeEvent" msprop:Generator_TableVarName="tableGDic" msprop:Generator_TablePropName="GDic" msprop:Generator_RowDeletingName="GDicRowDeleting" msprop:Generator_RowChangingName="GDicRowChanging" msprop:Generator_RowDeletedName="GDicRowDeleted" msprop:Generator_RowEvHandlerName="GDicRowChangeEventHandler" msprop:Generator_RowChangedName="GDicRowChanged" msprop:Generator_TableClassName="GDicDataTable" msprop:Generator_RowClassName="GDicRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tabela" msprop:Generator_ColumnVarNameInTable="columnTabela" msprop:Generator_ColumnPropNameInRow="Tabela" msprop:Generator_ColumnPropNameInTable="TabelaColumn" msprop:Generator_UserColumnName="Tabela">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Coluna" msprop:Generator_ColumnVarNameInTable="columnColuna" msprop:Generator_ColumnPropNameInRow="Coluna" msprop:Generator_ColumnPropNameInTable="ColunaColumn" msprop:Generator_UserColumnName="Coluna">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descricao" msdata:Caption="Descrição" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Relatorio" msdata:Caption="Relatório" msprop:Generator_ColumnVarNameInTable="columnRelatorio" msprop:Generator_ColumnPropNameInRow="Relatorio" msprop:Generator_ColumnPropNameInTable="RelatorioColumn" msprop:Generator_UserColumnName="Relatorio" type="xs:short" minOccurs="0" />
+              <xs:element name="Aplicacoes" msdata:Caption="Aplicações" msprop:Generator_ColumnVarNameInTable="columnAplicacoes" msprop:Generator_ColumnPropNameInRow="Aplicacoes" msprop:Generator_ColumnPropNameInTable="AplicacoesColumn" msprop:Generator_UserColumnName="Aplicacoes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="GDicKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GDic" />
+      <xs:field xpath="mstns:Tabela" />
+      <xs:field xpath="mstns:Coluna" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

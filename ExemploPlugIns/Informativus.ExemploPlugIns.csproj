@@ -25,25 +25,24 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\_bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Informativus.ExemploPlugIns.xml</DocumentationFile>
+    <DocumentationFile>..\_bin\Informativus.ExemploPlugIns.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\_bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Informativus.ExemploPlugIns.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Informativus.Comuns, Version=4.0.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Informativus.Comuns.dll</HintPath>
+    <Reference Include="Informativus.Comuns">
+      <HintPath>..\_bin\Informativus.Comuns.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,9 +54,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WSP.Lib, Version=4.1.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\WSP.Lib.dll</HintPath>
+    <Reference Include="WSP.Lib">
+      <HintPath>..\_bin\WSP.Lib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
