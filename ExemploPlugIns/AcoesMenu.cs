@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Windows.Forms;
 
 using WSP.Lib;
 
@@ -40,5 +41,35 @@ namespace Informativus.ExemploPlugIns
     /// O evento a ser disparado ao clicar na ação
     /// </summary>
     public EventHandler Event { get; }
+  }
+
+  /// <summary>
+  /// Fornecer ações para a aplicação
+  /// </summary>
+  class AcoesMenuEx : AcoesMenu, IWSPContextMenuActionsEx
+  {
+    /// <summary>
+    /// Inicialização da classe: <see cref="AcoesMenuEx"/>.
+    /// </summary>
+    /// <param name="caption">Texto do menu</param>
+    public AcoesMenuEx(string caption) : base(caption, null)
+    {
+
+    }
+
+    /// <summary>
+    /// Inicialização da classe: <see cref="AcoesMenuEx"/>.
+    /// </summary>
+    /// <param name="caption">Texto do menu</param>
+    /// <param name="evento">O evento a ser disparado ao clicar na ação</param>
+    public AcoesMenuEx(string caption, EventHandler evento) : base(caption, evento)
+    {
+
+    }
+
+    /// <summary>
+    /// Sub menus da ação
+    /// </summary>
+    public ToolStripItem[] SubMenus { get; set; }
   }
 }
