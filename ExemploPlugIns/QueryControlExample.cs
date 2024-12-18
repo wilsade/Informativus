@@ -1,9 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
 
 using WSP.Lib;
@@ -43,21 +40,44 @@ namespace Informativus.ExemploPlugIns
     /// <summary>
     /// Lista de ações disponibilizadas pela aplicação externa
     /// </summary>
-    public List<IWSPContextMenuActions> Actions
+    public List<IWSPContextMenuActionsEx> Actions
     {
       get
       {
-        var acao1 = new AcoesMenu("Exibir todo o texto do editor", (sender, args) =>
+        var menuComSubMenu = new AcoesMenuEx("Ações do meu plug-in com submenu")
         {
-          MessageBox.Show(EditorText, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        });
-        var acao2 = new AcoesMenu("Transformar o texto selecionado em minúscula", (sender, args) =>
+          MenuImage = new Bitmap(@"caminho/da/sua/imagem.png"),
+          SubMenus = new ToolStripItem[]
+          {
+            new ToolStripMenuItem("Exibir todo o texto do editor", image: null, onClick: (sender, args) =>
+            {
+              MessageBox.Show(EditorText, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }),
+
+            new ToolStripMenuItem("Transformar o texto selecionado em minúscula", image: null, onClick: (sender, args) =>
+            {
+              if (!string.IsNullOrWhiteSpace(EditorSelectedText))
+              {
+                ChangeSelectedText(EditorSelectedText.ToLower());
+              }
+            })
+          }
+        };
+
+        var menuUnico = new AcoesMenuEx("Banco de dados", (sender, args) =>
         {
-          if (!string.IsNullOrWhiteSpace(EditorSelectedText))
-            EditorSelectedText = EditorSelectedText.ToLower();
+          string msg = $"Banco de dados informado: {DbInfo}";
+          MessageBox.Show(msg, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         });
-        return new List<IWSPContextMenuActions>() { acao1, acao2 };
+
+        return new List<IWSPContextMenuActionsEx> { menuComSubMenu, menuUnico };
+
       }
     }
+
+    /// <summary>
+    /// Responsável por alterar o texto selecionado do Editor
+    /// </summary>
+    public Action<string> ChangeSelectedText { get; set; }
   }
 }
