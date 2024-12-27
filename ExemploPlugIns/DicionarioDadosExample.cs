@@ -13,7 +13,7 @@ namespace Informativus.ExemploPlugIns
   /// Fornecer informações do dicionário de dados: Tabela e Colunas
   /// Implementa a interface: <see cref="IInformativusDicionario"/>
   /// </summary>
-  [PlugInIdentifier("Exemplo: Dicionário de dados", "Wilsade", "2020/2", "1.0", "Dicionário de dados básico")]
+  [PlugInIdentifier("Exemplo: Dicionário de dados", "Wilsade - Github", "2020/2", "1.0", "Dicionário de dados básico")]
   public class DicionarioDadosExample : IInformativusDicionario
   {
     /// <summary>

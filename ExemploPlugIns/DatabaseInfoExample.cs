@@ -12,7 +12,7 @@ namespace Informativus.ExemploPlugIns
   /// Fornecer informações da base de dados
   /// Implementa a interface: <see cref="ILoadDatabasesInfo"/>
   /// </summary>
-  [PlugInIdentifier("Exemplo: DatabaseInfo", "Wilsade", "2020/2", "1.0", "Total de tabelas da base (SQL Server)")]
+  [PlugInIdentifier("Exemplo: DatabaseInfo", "Wilsade - Github", "2020/2", "1.0", "Total de tabelas da base (SQL Server)")]
   public class DatabaseInfoExample : ILoadDatabasesInfo
   {
     /// <summary>

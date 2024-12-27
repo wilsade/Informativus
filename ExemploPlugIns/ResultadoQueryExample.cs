@@ -13,7 +13,7 @@ namespace Informativus.ExemploPlugIns
   /// Fornecer menu de contexto no resultado de consultas.
   /// Implementa a interface: <see cref="IWSPDataSourceQueryResult"/>
   /// </summary>
-  [PlugInIdentifier("Exemplo: Resultado de consulta", "Wilsade", "2020/2", "1.0", "Menu de contexto no resultado de consulta")]
+  [PlugInIdentifier("Exemplo: Resultado de consulta", "Wilsade - Github", "2020/2", "1.0", "Menu de contexto no resultado de consulta")]
   public class ResultadoQueryExample : IWSPDataSourceQueryResult
   {
     /// <summary>

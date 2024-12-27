@@ -11,7 +11,7 @@ namespace Informativus.ExemploPlugIns
   /// <summary>
   /// Exemplo de como inserir um botão no Menu do Informativus
   /// </summary>
-  [PlugInIdentifier("Exemplo: Fornecer menu", "Wilsade", "2021/1", "1.0", "Menu simples")]
+  [PlugInIdentifier("Exemplo: Fornecer menu", "Wilsade - Github", "2021/1", "1.0", "Menu simples")]
   public class MenuExample : IMainMenu
   {
     /// <summary>

@@ -15,7 +15,7 @@ namespace Informativus.ExemploPlugIns
   /// Fornecer menu de contexto a partir do dicionário de dados
   /// Implementa a interface: <see cref="IDataGridViewDicionarioHandler"/>
   /// </summary>
-  [PlugInIdentifier("Exemplo: Menu do Dicionário de dados", "Wilsade", "2020/2", "1.0", "Menu para o Dicionário de dados")]
+  [PlugInIdentifier("Exemplo: Menu do Dicionário de dados", "Wilsade - Github", "2020/2", "1.0", "Menu para o Dicionário de dados")]
   public class DicionarioDadosContextMenuExample : IDataGridViewDicionarioHandler
   {
     /// <summary>

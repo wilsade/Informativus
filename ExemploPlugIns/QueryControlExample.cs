@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,7 +11,7 @@ namespace Informativus.ExemploPlugIns
   /// Fornecer menu de contexto para o Editor de consultas.
   /// Implementa a interface <see cref="IWSPQueryControlContext"/>
   /// </summary>
-  [PlugInIdentifier("Exemplo: Editor de consulta", "Wilsade", "2025/1", "1.0", "Menu de contexto no editor de consulta")]
+  [PlugInIdentifier("Exemplo: Editor de consulta", "Wilsade - Github", "2025/1", "1.0", "Menu de contexto no editor de consulta")]
   public class QueryControlExample : IWSPQueryControlContext
   {
     /// <summary>
@@ -44,9 +44,10 @@ namespace Informativus.ExemploPlugIns
     {
       get
       {
+        var imagePath = @"caminho\da\sua\imagem.png";
         var menuComSubMenu = new AcoesMenuEx("Ações do meu plug-in com submenu")
         {
-          MenuImage = new Bitmap(@"caminho/da/sua/imagem.png"),
+          MenuImage = System.IO.File.Exists(imagePath) ? new Bitmap(imagePath) : null,
           SubMenus = new ToolStripItem[]
           {
             new ToolStripMenuItem("Exibir todo o texto do editor", image: null, onClick: (sender, args) =>
