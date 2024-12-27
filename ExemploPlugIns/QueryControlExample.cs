@@ -65,7 +65,7 @@ namespace Informativus.ExemploPlugIns
           }
         };
 
-        var menuUnico = new AcoesMenuEx("Banco de dados", (sender, args) =>
+        var menuUnico = new AcoesMenuEx("Informações do Banco de dados", (sender, args) =>
         {
           string msg = $"Banco de dados informado: {DbInfo}";
           MessageBox.Show(msg, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
