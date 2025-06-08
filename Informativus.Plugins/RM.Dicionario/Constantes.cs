@@ -10,7 +10,7 @@ namespace RM.Dicionario
     /// <summary>
     /// Versão
     /// </summary>
-    public const string Versao = "4.0.2.5";
+    public const string Versao = "4.0.3.2";
 
     /// <summary>
     /// Nome do plug-in

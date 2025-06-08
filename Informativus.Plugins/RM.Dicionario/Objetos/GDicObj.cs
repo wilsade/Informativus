@@ -72,12 +72,7 @@ namespace RM.Dicionario.Objetos
     /// <returns>Meta data</returns>
     static MetaDataBase GetMetaData(WSPDataAccess data, TableModel tableModel)
     {
-      if (data.TipoBanco == TipoBancoEnum.SqlServer)
-        return new MetaDataSqlServer(data, tableModel);
-      else if (data.TipoBanco == TipoBancoEnum.Oracle)
-        return new MetaDataOracle(data, tableModel);
-      else
-        throw new WSPTipoBancoNaoSuportado(data.TipoBanco);
+      return MetaDataBase.CreateInstante(data, tableModel);
     }
 
     /// <summary>
